@@ -1,6 +1,6 @@
 variable "namespace" {
   description = "L'espace de noms de projet à utiliser pour la dénomination unique des ressources"
-  default     = "fall-project"
+  default     = "badr-project"
   type        = string
 }
 
@@ -43,13 +43,13 @@ variable "profile" {
 
 variable "cluster_name" {
   description = "nom du cluster"
-  default     = "fall-project-cluster"
+  default     = "badr-project-cluster"
   type        = string
 }
 
-variable "fall-project_repo" {
-  description = "depot git du chart helm d'fall-project"
-  default     = "git@github.com:CashNowMobile/fall-project-k8s.git"
+variable "badr-project_repo" {
+  description = "depot git du chart helm d'badr-project"
+  default     = "git@github.com:CashNowMobile/badr-project-k8s.git"
   type        = string
 }
 

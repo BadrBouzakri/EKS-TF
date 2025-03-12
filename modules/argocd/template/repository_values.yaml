@@ -1,13 +1,13 @@
 configs:
     credentialTemplates:
-        fall-project:
-            url: '${ fall-project_repo }'
-            sshPrivateKey: '${ fall-project_repo_secret_key }'
+        badr-project:
+            url: '${ badr-project_repo }'
+            sshPrivateKey: '${ badr-project_repo_secret_key }'
             type: git
 
     repositories:
-        fall-project:
-            name: fall-project
-            url: '${ fall-project_repo }'
+        badr-project:
+            name: badr-project
+            url: '${ badr-project_repo }'
             type: git
 

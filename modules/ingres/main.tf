@@ -15,7 +15,7 @@ module "nginx-controller" {
   ]
 }
 
-resource "kubernetes_ingress_v1" "fall-project-ingress" {
+resource "kubernetes_ingress_v1" "badr-project-ingress" {
 
   wait_for_load_balancer = true
   metadata {
@@ -37,13 +37,13 @@ resource "kubernetes_ingress_v1" "fall-project-ingress" {
 
     tls {
       hosts = [
-        "fall-project.${var.root_domain_name}"
+        "badr-project.${var.root_domain_name}"
       ]
       secret_name = "${var.namespace}-tls-secret"
     }
 
     rule {
-      host = "fall-project.${var.root_domain_name}"
+      host = "badr-project.${var.root_domain_name}"
 
       http {
         path {
@@ -53,7 +53,7 @@ resource "kubernetes_ingress_v1" "fall-project-ingress" {
             service {
               name = "${var.namespace}-frontend-service"
               port {
-                number = var.fall-project_frontend_port
+                number = var.badr-project_frontend_port
               }
             }
           }
@@ -66,7 +66,7 @@ resource "kubernetes_ingress_v1" "fall-project-ingress" {
             service {
               name = "${var.namespace}-server-service"
               port {
-                number = var.fall-project_server_port
+                number = var.badr-project_server_port
               }
             }
           }

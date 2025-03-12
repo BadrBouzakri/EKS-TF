@@ -17,8 +17,8 @@ resource "helm_release" "argocd" {
       profile                                = var.profile
     }),
     templatefile("${path.module}/template/repository_values.yaml", {
-      "fall-project_repo_secret_key" = var.fall-project_repo_secret_key
-      "fall-project_repo"            = var.fall-project_repo
+      "badr-project_repo_secret_key" = var.badr-project_repo_secret_key
+      "badr-project_repo"            = var.badr-project_repo
     })
   ]
 }
@@ -33,7 +33,7 @@ resource "helm_release" "argocd-apps" {
 
   values = [
     templatefile("${path.module}/template/application_values.yaml", {
-      "fall-project_repo" = var.fall-project_repo
+      "badr-project_repo" = var.badr-project_repo
     })
   ]
 

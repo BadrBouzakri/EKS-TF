@@ -10,12 +10,12 @@ variable "root_domain_name" {
   type = string
 }
 
-variable "fall-project_frontend_port" {
+variable "badr-project_frontend_port" {
   type = string
   default = "5173"
 }
 
-variable "fall-project_server_port" {
+variable "badr-project_server_port" {
   type = string
   default = "5001"
 }

@@ -35,7 +35,7 @@ module "eks" {
   }
 
   eks_managed_node_groups = {
-    fall-project = {
+    badr-project = {
       min_size     = 1
       max_size     = 3
       desired_size = "${var.instance_number}"
@@ -50,7 +50,7 @@ module "eks" {
   tags = {
     env       = var.profile
     terraform = "true"
-    type      = "fall-project-eks"
+    type      = "badr-project-eks"
   }
 }
 

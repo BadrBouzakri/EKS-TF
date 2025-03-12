@@ -1,8 +1,8 @@
-variable "fall-project_repo" {
+variable "badr-project_repo" {
   type = string
 }
 
-variable "fall-project_repo_secret_key" {
+variable "badr-project_repo_secret_key" {
   type = string
 }
 
@@ -13,7 +13,7 @@ variable "profile" {
 variable "argocd_server_host" {
   description = "Hostname for argocd (will be utilised in ingress if enabled)"
   type        = string
-  default     = "argocd-fall-project.olivierrey.cloudns.ph"
+  default     = "argocd-badr-project.olivierrey.cloudns.ph"
 }
 
 variable "argocd_ingress_class" {

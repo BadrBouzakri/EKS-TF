@@ -1,11 +1,11 @@
 server:
   additionalApplications:
-    - name: fall-project
+    - name: badr-project
       namespace: default
       project: default
       source:
-        repoURL: '${ fall-project_repo }'
-        path: helm/fall-project
+        repoURL: '${ badr-project_repo }'
+        path: helm/badr-project
         targetRevision: main
         helm:
           valueFiles:

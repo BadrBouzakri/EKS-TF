@@ -10,7 +10,7 @@ variable "velero_provider" {
 
 variable "bucket_name" {
   type = string
-  default     = "fall-project-backup-s3"
+  default     = "badr-project-backup-s3"
 }
 
 variable "cluster_name" {

@@ -1,7 +1,7 @@
 data "aws_caller_identity" "current" {}
 
-resource "aws_iam_policy" "fall-project_velero_policy" {
-  name        = "fall-project-velero-policy"
+resource "aws_iam_policy" "badr-project_velero_policy" {
+  name        = "badr-project-velero-policy"
   description = "Une politique pour les opérations EC2 et S3"
 
   policy = jsonencode({
@@ -48,8 +48,8 @@ resource "aws_iam_policy" "fall-project_velero_policy" {
   })
 }
 
-resource "aws_iam_role" "fall-project_velero_role" {
-  name        = "fall-project-velero-role"
+resource "aws_iam_role" "badr-project_velero_role" {
+  name        = "badr-project-velero-role"
   description = "Un rôle pour les opérations EC2 et S3"
 
   assume_role_policy = jsonencode(
@@ -81,7 +81,7 @@ resource "aws_iam_role" "fall-project_velero_role" {
   )
 }
 
-resource "aws_iam_role_policy_attachment" "fall-project_velero_policy_attachment" {
-  role       = aws_iam_role.fall-project_velero_role.name
-  policy_arn = aws_iam_policy.fall-project_velero_policy.arn
+resource "aws_iam_role_policy_attachment" "badr-project_velero_policy_attachment" {
+  role       = aws_iam_role.badr-project_velero_role.name
+  policy_arn = aws_iam_policy.badr-project_velero_policy.arn
 }

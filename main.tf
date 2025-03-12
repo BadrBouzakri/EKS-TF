@@ -65,9 +65,9 @@ terraform {
   }
 }
 
-resource "kubernetes_namespace" "fall-project" {
+resource "kubernetes_namespace" "badr-project" {
   metadata {
-    name = "fall-project"
+    name = "badr-project"
   }
 }
 
@@ -93,8 +93,8 @@ module "eks" {
 
 module "argocd" {
   source                = "./modules/argocd"
-  fall-project_repo            = var.fall-project_repo
-  fall-project_repo_secret_key = var.GIT_SECRET_KEY
+  badr-project_repo            = var.badr-project_repo
+  badr-project_repo_secret_key = var.GIT_SECRET_KEY
   profile = var.profile
 }
 
@@ -126,12 +126,3 @@ module "ingress" {
 }
 
 
-
-#module "bastion" {
-#  source        = "./modules/bastion"
-#  namespace     = var.namespace
-#  instance_type = var.instance_type_bastion
-#  vpc           = module.networking.vpc
-#  sg_pub_id     = module.networking.sg_pub_id
-#  key_name      = "fall-project"
-#}
