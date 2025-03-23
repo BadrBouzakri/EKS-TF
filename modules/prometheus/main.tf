@@ -7,7 +7,7 @@ resource "helm_release" "prometheus" {
   version    = "45.7.1"
   values = [
     templatefile("${path.module}/template/values.yaml", {
-      grafana_host = "grafana-badr-project.${var.root_domain_name}"
+      grafana_host = "grafana-project.${var.root_domain_name}"
       grafana_pwd = var.grafana_pwd
       grafana_ingress_enabled                 = var.grafana_ingress_enabled
       grafana_ingress_tls_acme_enabled        = var.grafana_ingress_tls_acme_enabled

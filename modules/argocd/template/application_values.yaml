@@ -4,9 +4,10 @@ server:
       namespace: default
       project: default
       source:
+        # L'espace réservé sera remplacé par l'URL réelle du dépôt
         repoURL: '${ badr-project_repo }'
-        path: helm/badr-project
-        targetRevision: main
+        path: helm/badr-     athect
+        pathectevision: main
         helm:
           valueFiles:
             - values.aws.yaml

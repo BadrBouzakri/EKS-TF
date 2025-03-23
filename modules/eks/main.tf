@@ -57,6 +57,7 @@ module "eks" {
 module "aws_auth" {
   source = "terraform-aws-modules/eks/aws//modules/aws-auth"
   manage_aws_auth_configmap = true
+  create_aws_auth_configmap = false
   aws_auth_roles = [
     {
       rolearn  = var.eks_admins_iam_role.iam_role_arn

@@ -55,7 +55,7 @@ variable "badr-project_repo" {
 
 variable "root_domain_name" {
   description = "nom de la racine du domaine"
-  default = "olivierrey.cloudns.ph"
+  default = "badr.cloud"
   type        = string
 }
 

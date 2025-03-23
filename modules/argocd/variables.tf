@@ -13,7 +13,7 @@ variable "profile" {
 variable "argocd_server_host" {
   description = "Hostname for argocd (will be utilised in ingress if enabled)"
   type        = string
-  default     = "argocd-badr-project.olivierrey.cloudns.ph"
+  default     = "argocd-project.badr.cloud"
 }
 
 variable "argocd_ingress_class" {

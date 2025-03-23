@@ -43,8 +43,8 @@ provider "kubectl" {
 }
 
 terraform {
-  cloud {
-  }
+  #cloud {
+  #}
   required_providers {
     aws = {
       source  = "hashicorp/aws"
