@@ -73,6 +73,6 @@ module "eks_admins_iam_group" {
   name                              = "eks-admin"
   attach_iam_self_management_policy = false
   create_group                      = true
-  group_users                       = ["student36_mai24_continu_devops_badr"]
+  group_users                       = [] # "student36_mai24_continu_devops_badr"
   custom_group_policy_arns          = [module.allow_assume_eks_admins_iam_policy.arn]
 }

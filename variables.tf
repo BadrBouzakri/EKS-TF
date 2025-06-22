@@ -6,7 +6,7 @@ variable "namespace" {
 
 variable "instance_type_bastion" {
   description = "Type d'instance pour le bastion"
-  default     = "t2.micro"
+  default     = "t3a.large"
   type        = string
 }
 
@@ -18,7 +18,7 @@ variable "ami_type" {
 
 variable "instance_type" {
   description = "Type d'instance pour les serveurs eks"
-  default     = "t3a.medium"
+  default     = "t3a.large"
   type        = string
 }
 
